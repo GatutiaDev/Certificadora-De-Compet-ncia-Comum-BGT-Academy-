@@ -5,15 +5,127 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Elms Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
+/* 1. O CONTAINER (USA CSS GRID) */
+    .container-aulas {
+    display: grid;
+    
+    /* * Esta é a linha mais importante!
+    * Ela diz: Crie colunas que tenham no mínimo 280px.
+    * Se couberem mais colunas na tela, crie-as.
+    * '1fr' faz com que elas se estiquem para ocupar todo o espaço.
+    * É RESPONSIVO SEM MEDIA QUERY!
+    */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    
+    /* Espaçamento entre os cards */
+    gap: 20px;
+    
+    /* Espaçamento geral */
+    padding: 20px;
+    }
+
+    /* 2. O ESTILO DE CADA CARD */
+    .card-aula {
+    border: 1px solid #e0e0e0; /* A borda que você já tinha */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    overflow: hidden; /* Garante que a imagem não vaze dos cantos */
+    
+    /* Usamos Flexbox para organizar o conteúdo DENTRO do card */
+    display: flex;
+    flex-direction: column; /* Organiza em coluna (imagem em cima, texto embaixo) */
+    background-color: white;
+    }
+
+    /* 3. A IMAGEM DENTRO DO CARD */
+    .card-aula img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do card */
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Evita que a imagem distorça (ela corta para caber) */
+    image-rendering: auto;
+    }
+
+    /* 4. A ÁREA DE CONTEÚDO (TÍTULO E BOTÃO) */
+    .card-conteudo {
+    padding: 15px;
+    /* Isso faz o texto crescer e empurrar o botão para baixo */
+    flex-grow: 1; 
+    
+    /* Organiza o título e o botão */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Título em cima, botão embaixo */
+    }
+
+    .card-conteudo h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.25rem; /* 20px */
+    }
+
+    /* 5. O BOTÃO */
+    .botao-aula {
+    /* Recriando o estilo do seu botão da imagem */
+    background-color: #f0ad4e; /* Um tom de laranja/dourado */
+    color: #333; /* Texto escuro para contraste */
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    }
+
+    .botao-aula:hover {
+    background-color: #ec9b2d; /* Um pouco mais escuro no hover */
+    }
+
+@keyframes encolher-navbar {
+    to {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        font-size: 16px;
+        background-color: #000000; /*trocar Cor de fundo ao encolher */
+        border-bottom: 3px solid #ffa500;
+    }
+}
+
+@keyframes encolher-logo {
+    to {
+        height: 50px;
+    }
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 20px;
+
+    animation: encolher-navbar linear;
+    animation-timeline: scroll(); 
+    animation-range: 0px 150px;
+    animation-fill-mode: forwards;
+}
 
 .logo {
-    height: 200px;
+    margin-top: 15px;
+    height: 100px;
+    animation: encolher-logo linear;
+    animation-timeline: scroll(); 
+    animation-range: 0px 150px;
+    animation-fill-mode: forwards;
 }
 
 .container {
@@ -36,7 +148,6 @@ h2 {
     font-size: 2rem;
     text-align: center;
     padding-bottom: 10px;
-    border-bottom: 2px solid #ddd;
 }
 
 h3 {
@@ -58,10 +169,10 @@ section {
 
 
 header {
-    background-color: #7bae03; 
+    background-color: #03ae80; 
     color: #fff;
     padding: 15px 0;
-    border-bottom: 3px solid #ffa500;
+
 }
 
 header h1 {
@@ -116,6 +227,51 @@ button:hover {
     background-color: #cc8400;
 }
 
+#bem-vindo {
+    height: 700px;
+    scroll-margin-top: 200px;
+    background-color: #03ae80;
+    text-align: center;
+}
+
+#bem-vindo p{
+    font-size: 1.2rem;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#bem-vindo h1{
+    text-align: center;
+    font-size: 3rem;
+}
+
+#bem-vindo h2{
+    font-size: 2.0rem;
+    color: #f9f9f9;
+}
+
+#bem-vindo button{
+    margin-top: 50px;
+    font-size: 1.2rem;
+}
+
+#objetivo {
+    scroll-margin-top: 80px;
+}
+
+#objetivo p{
+    font-size: 1.2rem;
+}
+
+#conteudos p{
+    font-size: 1.2rem;
+}
+
+#conteudos {
+    scroll-margin-top: 80px;
+}
 
 #conteudos .curso-item {
     display: flex;
@@ -258,5 +414,6 @@ footer {
         gap: 15px;
         text-align: center;
     }
+
 
 }

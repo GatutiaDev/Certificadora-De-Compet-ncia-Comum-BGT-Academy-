@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    
     <title>Site BGT</title>
 </head>
+
 <body>
-    <header>
+    <header class="navbar">
         <div class="container">
-            <h1><img class="logo" src="./imgs/logo.png" alt="Logo BGT"></h1>
+            <h1><img class="logo" src="./imgs/logo2.png" alt="Logo BGT"></h1>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#bem-vindo">Sobre</a></li>
+                    <li><a href="#objetivo">Sobre</a></li>
                     <li><a href="#conteudos">Aulas</a></li>
                     <li><a href="#integrantes">Contato</a></li>
                 </ul>
@@ -24,7 +31,16 @@
     <main>
         <section id="bem-vindo">
             <div class="container">
-                <h2>Bem-vindo ao Curso</h2>
+                <h2>Bem-vindo ao</h2>
+                <h1>BGT Academy</h1>
+                <p>Transforme linhas de código em sites incríveis. Comece a construir agora!</p>
+                <a href="#objetivo"><button>Comece sua Jornada</button></a>
+            </div>
+        </section>
+
+        <section id="objetivo">
+            <div class="container">
+                <h3>Objetivo</h3>
                 <p>O curso tem como objetivo desenvolver Recursos Educacionais Abertos (REA) voltados para o ensino de Desenvolvimento Web Front-End, proporcionando um aprendizado acessível e lúdico para iniciantes criarem sua primeira página web interativa.</p>
             </div>
         </section>
@@ -32,36 +48,46 @@
         <section id="conteudos">
             <div class="container">
                 <h3>Conteúdos do Curso</h3>
-                
-                <div class="curso-item">
-                    <span>Introdução ao HTML</span>
-                    <button>Ver Aulas</button>
-                </div>
-                <div class="curso-item">
-                    <span>CSS para Estilização e Layouts responsivos</span>
-                    <button>Ver Aulas</button>
-                </div>
-                <div class="curso-item">
-                    <span>Projeto integrador</span>
-                    <button>Ver Aulas</button>
-                </div>
-                <div class="curso-item">
-                    <span>Materiais Complementares</span>
-                    <button>Ver Aulas/documentos</button>
-                </div>
-            </div>
-        </section>
 
-        <section id="video-aulas">
-            <div class="container">
-                <h3>Video Aulas</h3>
-                <p>Construa e Conquiste: Dominando HTML e CSS Através de um Projeto Integrador.</p>
+                <p>
+                    Nestas aulas, você seguirá a jornada completa do desenvolvimento front-end. Começamos com o HTML Básico, onde você aprenderá a construir a fundação e a estrutura de qualquer página web. Em seguida, mergulhamos no CSS para dar vida ao seu projeto com estilos, layouts responsivos e animações.
+
+                    Para consolidar tudo, finalizamos com um Projeto Integrador, onde você aplicará 100% do que aprendeu para construir um site completo do zero.
+                </p>
+
+                <div class="container-aulas">
                 
-                <div class="video-grid">
-                    <div class="video-placeholder">VIDEO</div>
-                    <div class="video-placeholder">VIDEO</div>
-                    <div class="video-placeholder">VIDEO</div>
-                    <div class="video-placeholder">VIDEO</div>
+                    <div class="card-aula">
+                        <img src="./imgs/html.png" alt="Ilustração do HTML5">
+                        <div class="card-conteudo">
+                        <h3>Introdução ao HTML</h3>
+                        <a href="#" class="botao-aula">Ver Aulas!</a>
+                        </div>
+                    </div>
+
+                    <div class="card-aula">
+                        <img src="./imgs/css.png" alt="Ilustração do CSS3">
+                        <div class="card-conteudo">
+                        <h3>CSS para Estilização e Layouts responsivos</h3>
+                        <a href="#" class="botao-aula">Ver Aulas!</a>
+                        </div>
+                    </div>
+
+                    <div class="card-aula">
+                        <img src="./imgs/projetointegrador.png" alt="Ilustração de um projeto">
+                        <div class="card-conteudo">
+                        <h3>Projeto integrador</h3>
+                        <a href="#" class="botao-aula">Ver Aulas!</a>
+                        </div>
+                    </div>
+
+                    <div class="card-aula">
+                        <img src="./imgs/matetial.png" alt="Ilustração de documentos">
+                        <div class="card-conteudo">
+                        <h3>Materiais Complementares</h3>
+                        <a href="#" class="botao-aula">Ver Aulas!</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
