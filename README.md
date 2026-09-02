@@ -19,8 +19,6 @@ O projeto foi construído utilizando tecnologias base da web:
 
 - **HTML5**: Estruturação semântica de páginas e seções da aplicação.
 - **CSS3**: Estilização, layout responsivo e identidade visual.
-- **JavaScript**: Interatividade, manipulação de DOM e validações no cliente.
-*(Observação: Caso use frameworks ou bibliotecas adicionais como React, Node.js, Bootstrap, etc., liste-os aqui).*
 
 ---
 
